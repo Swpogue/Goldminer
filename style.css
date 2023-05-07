@@ -1,0 +1,20 @@
+.bg-img{
+  background-size: cover;
+  background-image: url(assets/mineimg.png);
+  background-repeat: no-repeat;
+}
+
+.goldColor{
+  color: gold;
+}
+
+.banner{
+  position: relative;
+}
+
+.imgText{
+  position: absolute;
+  top: 230px;
+  left: 130px;
+  font-size: 10px;
+}
