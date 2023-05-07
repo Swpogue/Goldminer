@@ -57,7 +57,7 @@ let automaticUpgrades = [
 function drawGold() {
   let goldElem = document.getElementById("gold-coin")
   goldElem.innerText = gold.toString()
-  console.log('gold working');
+  // console.log('gold working');
 }
 
 function mine() {
@@ -87,26 +87,27 @@ function drawAutoGps() {
 drawAutoGps()
 
 function drawEquipment(reg) {
+  // sudo from Savannah --v
   // create a variable that is going to store the HTML from our loop (lat template...)
   // we need to add to our template - so loop over your array and add a single object to your template and the HTML
   let template = ''
   clickUpgrades.forEach(u => {
     template +=
-      `<div class="p-4 my-1 border border-warning rounded">
+      `<div class="p-2 my-1 border border-warning rounded">
       <h5 class="text-primary">${u.name}</h5>
       <p>Price: ${u.price}</p>
       <p>Quantity: ${u.quantity}</p>
       <p>Gold Per Click Each: ${u.multiplier}</p>
       <button onclick="buyUpgrade('${u.name}')" id="${u.name}">Buy x1</button>
     </div>`
+    document.getElementById('EquipUpgrade').innerHTML = template
     // put it on the HTML document 
 
+    // Failed attempt --v  I was trying to draw 1 object instead of All with template.
     // let axeElem = document.getElementById("pickaxe")
     // axeElem.innerText = quantity.toString()
-    // console.log("pick q up");
+    // console.log("pickaxe quantity up");
   })
-  document.getElementById('EquipUpgrade').innerHTML = template
-
 }
 drawEquipment()
 
@@ -114,7 +115,7 @@ function drawAutoEquip(auto) {
   let template = ''
   automaticUpgrades.forEach(a => {
     template +=
-    `<div class="p-4 my-1 border border-warning rounded">
+    `<div class="p-2 my-1 border border-warning rounded">
     <h5 class="text-primary">${a.name}</h5>
     <p>Price: ${a.price}</p>
     <p>Quantity: ${a.quantity}</p>
@@ -131,7 +132,7 @@ function drawAutoEquip(auto) {
   }
 drawAutoEquip()
 
-// Find each 
+// Find each and add quantity and multiplier subtract Gold per price
 function buyUpgrade(upgradeName) {
   // MY FIRST TRY.. 
   // clickUpgrades.forEach(upgrade => {
@@ -139,21 +140,19 @@ function buyUpgrade(upgradeName) {
   //   upgrade.quantity++;
   //   gold -= upgrade.price;
   //   console.log("Success")
-
   // } else {
   //   alert("You don't have enough Gold!")
   //   console.log("failed");
   // }
-  // }) HELPED BY MILES --v
+  // }) HELPED BY MILES --v with 1 line. Was able to do the rest with this.
+  // let foundUpgrade = clickUpgrades.find(u => u.name == upgradeName)
   let foundUpgrade = clickUpgrades.find(u => u.name == upgradeName)
   if (gold >= foundUpgrade.price) {
     foundUpgrade.quantity++;
     gold -= foundUpgrade.price;
     foundUpgrade.price = Math.round(foundUpgrade.price * 1.1);
     clickMultiplier += foundUpgrade.multiplier;
-    console.log("Upgrade Success")
-    console.log('FOUND UPGRADE', foundUpgrade);
-    console.log('Upgrade Name:', upgradeName);
+    console.log('UPGRADE SUCCESS', foundUpgrade);
     drawGold()
     drawEquipment()
     drawClickAmount()
@@ -175,7 +174,7 @@ function buyAuto(autoUpgrade) {
     gold -= foundUpgrade.price;
     foundUpgrade.price = Math.round(foundUpgrade.price * 1.1);
     autoMultiplier += foundUpgrade.multiplier
-    console.log(foundUpgrade);
+    console.log("AUTO UPGRADE SUCCESS",foundUpgrade );
     drawGold();
     drawAutoEquip()
     drawAutoGps()

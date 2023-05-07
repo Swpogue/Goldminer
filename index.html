@@ -33,8 +33,24 @@
 
 <body class="bg-img">
 
-  <!-- Needs a clickable img to collect resources -->
+  
+  
   <main class="container-fluid d-flex justify-content-around">
+  
+  <!-- Placeholders for upgraded equipment and how many  -->
+    <section class="text-white row card bg-black m-1">
+      <H4 class="text-info">Manual Mining</H4>
+      <div  class="" id="EquipUpgrade">
+       <!-- <div>
+         <h5>Upgrades</h5>
+        <p>Name:</p>
+        <p>Price: <span>0</span></p>
+        <p>Quantity: <span>0</span></p>
+        <p>Multiplier: <span>0</span></p>
+      </div> -->
+    </div>
+  </section>
+  <!-- Needs a clickable img to collect resources -->
     <section class="row align-content-center m-1">
       <div class="col-12 text-white card bg-black">
         <h4 class="goldColor">Gold:<span id="gold-coin">0</span> </h4>
@@ -44,24 +60,13 @@
       <div>
       </div>
     </section>
-
-
-
-    <!-- Placeholders for upgraded equipment and how many  -->
-    <section class="text-white row card bg-black m-1">
-      <H4 class="text-info">Manual Mining</H4>
-      <div id="EquipUpgrade">
-       <!-- <div>
-        <h5>Upgrades</h5>
-        <p>Name:</p>
-        <p>Price: <span>0</span></p>
-        <p>Quantity: <span>0</span></p>
-        <p>Multiplier: <span>0</span></p>
-       </div> -->
+    <section class="row align-content-center">
+      <div class="banner">
+        <img onclick="mine()" src="assets/gold.png" alt="gold">
+        <p class="imgText text-white">Click to Mine</p> 
       </div>
-
     </section>
-
+  
     <!-- Auto upgraded Equipment -->
     <section class="text-white row card bg-black m-1">
       <h4 class="text-info">Auto Mining</h4>
@@ -74,15 +79,9 @@
         <p>Multiplier:0</p>
        </div> -->
       </div>
-
     </section>
 
-    <section class="row align-content-center">
-      <div class="banner">
-        <img onclick="mine()" src="assets/gold.png" alt="gold">
-        <p class="imgText text-white">Click to Mine</p> 
-      </div>
-    </section>
+   
 
   </main>
 
