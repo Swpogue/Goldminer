@@ -133,9 +133,9 @@ function drawGold() {
 
   // console.log('gold working');
 }
-// TODO Fix GOLD!
+
 function mine() {
-  gold += 100 * clickMultiplier
+  gold +=   clickMultiplier
   console.log("gold", gold)
   drawGold()
   saveGold()
@@ -207,10 +207,7 @@ function drawAutoEquip(auto) {
     <button ${disabledAttr} onclick="buyAuto('${a.name}')" id="${a.name}Button">Buy x1</button>
     </div>`
     
-    // TODO Ask how this would work
-    //  if (gold < a.price) {
-      //   document.getElementById(`${a.name}Button`).disabled = true;
-      //   }
+    
     })
     document.getElementById('AutoUpgrades').innerHTML = template
 }
@@ -291,7 +288,8 @@ function startAutoMining() {
 }
 
 function resetGame() {
-  window.alert('Are You Sure you want to Reset Game?')
+  // alert('Are You Sure you want to Reset Game?')
+  gold = 0
   localStorage.clear();
   window.location.reload();
   console.log('EUREKA');
