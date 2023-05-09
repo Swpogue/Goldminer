@@ -279,6 +279,8 @@ function startAutoMining() {
     automaticUpgrades.forEach(a => {
       gold += a.quantity * a.multiplier
     });
+    drawAutoEquip()
+    drawEquipment()
     drawAutoGps()
     drawGold()
     saveGold()
