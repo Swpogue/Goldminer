@@ -27,6 +27,12 @@ let clickUpgrades = [
     quantity: 0,
     multiplier: 25,
   },
+  {
+    name: 'Steam Hammer',
+    price: 4200,
+    quantity: 0,
+    multiplier: 50,
+  },
 
 ];
 
@@ -50,6 +56,13 @@ let automaticUpgrades = [
     price: 10000,
     quantity: 0,
     multiplier: 100,
+
+  },
+  {
+    name: 'AI Drill',
+    price: 1000000,
+    quantity: 0,
+    multiplier: 500,
 
   }
 ];
