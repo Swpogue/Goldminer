@@ -16,22 +16,28 @@ let clickUpgrades = [
 
   {
     name: 'Pickaxe',
-    price: 300,
+    price: 500,
     quantity: 0,
     multiplier: 5,
   },
 
   {
     name: 'Jack Hammer',
-    price: 1200,
+    price: 2500,
     quantity: 0,
     multiplier: 25,
   },
   {
     name: 'Steam Hammer',
-    price: 4200,
+    price: 5000,
     quantity: 0,
     multiplier: 50,
+  },
+  {
+    name: 'Hydro Hammer',
+    price: 12000,
+    quantity: 0,
+    multiplier: 120,
   },
 
 ];
@@ -39,14 +45,14 @@ let clickUpgrades = [
 let automaticUpgrades = [
   {
     name: 'Backhoe',
-    price: 1000,
+    price: 2000,
     quantity: 0,
     multiplier: 20,
   },
 
   {
     name: 'Big Bertha',
-    price: 3500,
+    price: 5000,
     quantity: 0,
     multiplier: 50,
 
@@ -60,10 +66,15 @@ let automaticUpgrades = [
   },
   {
     name: 'AI Drill',
-    price: 1000000,
+    price: 5000000,
     quantity: 0,
     multiplier: 500,
-
+  },
+  {
+    name: 'Space Drill',
+    price: 15000000,
+    quantity: 0,
+    multiplier: 1500,
   }
 ];
 loadAutoMultiplier()
