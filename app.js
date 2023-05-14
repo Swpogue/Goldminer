@@ -5,6 +5,7 @@ let backhoe = 0;
 let bigBertha = 0;
 let clickMultiplier = 1;
 let autoMultiplier = 0;
+let totalGold = 0;
 
 let clickUpgrades = [
   {
@@ -94,6 +95,16 @@ function loadGold() {
     gold = goldData
   }
   drawGold()
+}
+
+function saveTotalGold() {
+  window.localStorage.setItem('totalGold', JSON.stringify(totalGold))
+  
+}
+
+function loadTotalGold() {
+  let totalGoldData = JSON.parse(window.localStorage.getItem('totalGold'))
+  
 }
 
 function saveUpgrades() {
