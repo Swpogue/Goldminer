@@ -322,7 +322,7 @@ function startAutoMining() {
     saveGold()
   }, 1000);
   
-  // console.log("Interval");
+  console.log("Interval");
 }
 
 function resetGame() {
