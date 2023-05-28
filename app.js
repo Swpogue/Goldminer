@@ -77,6 +77,7 @@ let automaticUpgrades = [
     quantity: 0,
     multiplier: 1500,
   }
+  
 ];
 loadAutoMultiplier()
 loadGold()
@@ -278,8 +279,8 @@ function buyUpgrade(upgradeName) {
 
   } else {
     window.alert("You don't have enough Gold!")
-    console.log("failed");
-    console.log(foundUpgrade);
+    // console.log("failed");
+    // console.log(foundUpgrade);
     drawGold()
     drawEquipment()
   }
@@ -321,7 +322,7 @@ function startAutoMining() {
     saveGold()
   }, 1000);
   
-  console.log("Interval");
+  // console.log("Interval");
 }
 
 function resetGame() {
